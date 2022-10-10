@@ -1,0 +1,68 @@
+//spread operator
+//array
+// var arr=[1,2,3,4]
+// console.log(arr)
+// arr.push(9)
+// console.log(arr)
+
+
+//object
+var obj={
+    "name":"salesforce",
+     "age":23,
+     "full name":"asaels"
+}
+console.log(obj.name,obj.age,obj["full name"])
+
+
+// explanding string
+ let x="hello everyone"
+ let char=[...x]
+ console.log(char)
+ let arr=['w','e','l','c','o','m','e']
+ console.log([...arr,"welcome"])
+
+ //adding to the array
+  let course=["java","python","c"]
+  console.log([...course,"cobol"])
+
+
+  //4.combining objects
+let obj1={name:"hema",age:23,color:"greeen"}
+let obj2={name:"facebook",age:24}
+let obj3={...obj1,...obj2}
+console.log(obj3)
+
+//5.shallow copy
+var array=[1,2,3,]
+array.push(20)
+console.log(array)
+
+var arraycopy=array//in this copy the array references are also get copied
+arraycopy.push(30)
+console.log(arraycopy)
+console.log(array)
+
+
+var arr1=[2,3,4]
+var arr2=[...arr1]//here the arrays values are only get copied,it avoids the copy of references
+arr2.push(30)
+console.log(arr2)
+console.log(arr1)
+
+//nested copy
+var arrobj=[
+
+    {name:"hema"},
+    {name:"hima"}
+]
+// var arrobj1=[...arrobj]
+// console.log(arrobj1)
+// arrobj1[0].name="superman"
+// console.log(arrobj1)
+// console.log(arrobj)
+
+var arrobj1=JSON.parse(JSON.stringify(arrobj))
+arrobj1[0].name="superman"
+console.log(arrobj1)
+console.log(arrobj)
