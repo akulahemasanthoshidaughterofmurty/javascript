@@ -12,7 +12,9 @@ let options={
     age:23,
     type:"crm"
 }
-var title=options.title
-var age=options.age
-var type=options.type
+//var title=options.title
+//var age=options.age
+//var type=options.type
+so that using the destructuring we can directly get the values of object properties as variables with same name
+let {title,age,type}=options
 console.log(title,age,type)
